@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SKY GATE Reservation</title>
+    <style>
+        /* Styling for the header */
+        #header {
+            text-align: center;
+            background-color: #26583D;
+            color: white;
+            padding: 10px;
+        }
+
+      
+
+        /* Styling for the reservation form */
+        #reservation-form {
+            width: 50%;
+            margin: 0 auto;
+            background-color: #9F9F9F;
+            padding: 20px;
+        }
+
+        /* Styling for labels and input fields */
+        label {
+            display: block;
+            margin-bottom: 10px;
+        }
+
+        input[type="text"], input[type="number"], select, textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        /* Styling for the submit button */
+        input[type="submit"] {
+            background-color: #A41B04;
+            color: white;
+            border: "1";
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #2980b9;
+        }
+    </style>
+</head>
+<body>
+    <div id="header">
+        <h1 style="color: #3A6E5D; background-color: #BA9C84;">SKY GATE</h1>
+    </div>
+    <div id="reservation-form">
+        <h2>Reservation Form</h2>
+        <form action="#" method="post">
+            <!-- Contact Information -->
+            <label for="full-name">Full Name:</label>
+            <input type="text" id="full-name" name="full-name" required>
+
+            <label for="contact-number">Contact Number:</label>
+            <input type="text" id="contact-number" name="contact-number" required>
+
+            <label for="email">Email Address:</label>
+            <input type="email" id="email" name="email" required>
+
+            <!-- Type of Event -->
+            <label for="event-type">Type of Event:</label>
+            <select id="event-type" name="event-type">
+                <option value="hotel-stay">Hotel Stay</option>
+                <option value="gathering">Gathering</option>
+                <option value="party">Party</option>
+            </select>
+
+            <!-- Date and Time -->
+            <label>Date and Time:</label>
+            <label for="day">Day</label>
+            <input type="radio" id="day" name="time" value="day" required>
+            <label for="night">Night</label>
+            <input type="radio" id="night" name="time" value="night" required>
+
+            <label for="event-date">Event Date:</label>
+            <input type="date" id="event-date" name="event-date" required>
+
+            <label for="start-time">Start Time:</label>
+            <input type="time" id="start-time" name="start-time" required>
+
+            <label for="end-time">End Time:</label>
+            <input type="time" id="end-time" name="end-time" required>
+
+            <!-- Number of Guests -->
+            <label for="num-families">Number of Families:</label>
+            <input type="number" id="num-families" name="num-families" required>
+
+            <label for="num-adults">Number of Adults:</label>
+            <input type="number" id="num-adults" name="num-adults" required>
+
+            <label for="num-children">Number of Children:</label>
+            <input type="number" id="num-children" name="num-children" required>
+
+            <!-- Special Accommodations -->
+            <label for="special-accommodations">Special Accommodations for Guests with Disabilities:</label>
+            <textarea id="special-accommodations" name="special-accommodations"></textarea>
+
+            <!-- Room or Space Requirements -->
+            <label for="room-space-type">Room or Space Type:</label>
+            <input type="text" id="room-space-type" name="room-space-type" required>
+
+            <label for="room-type">Room Type:</label>
+            <select id="room-type" name="room-type">
+                <option value="single">Single</option>
+                <option value="double">Double</option>
+                <option value="suite">Suite</option>
+            </select>
+
+            <!-- Special Requests -->
+            <label for="special-requests">Special Requests:</label>
+            <textarea id="special-requests" name="special-requests"></textarea>
+
+            <!-- Food and Beverage Requirements -->
+            <label for="food-beverage">Food and Beverage Requirements:</label>
+            <label for="breakfast">Breakfast</label>
+            <input type="checkbox" id="breakfast" name="food-beverage" value="breakfast">
+            <label for="lunch">Lunch</label>
+            <input type="checkbox" id="lunch" name="food-beverage" value="lunch">
+            <label for="dinner">Dinner</label>
+            <input type="checkbox" id="dinner" name="food-beverage" value="dinner">
+
+            <!-- Audio-Visual and Equipment Needs -->
+            <label for="audio-visual">Audio-Visual Equipment Needs:</label>
+            <input type="text" id="audio-visual" name="audio-visual">
+
+            <!-- Decoration and Setup -->
+            <label for="decoration">Decoration Requirements:</label>
+            <textarea id="decoration" name="decoration"></textarea>
+
+            <label for="setup">Setup Instructions:</label>
+            <textarea id="setup" name="setup"></textarea>
+
+            <!-- Entertainment and Activities -->
+            <label for="entertainment">Entertainment and Activities:</label>
+            <textarea id="entertainment" name="entertainment"></textarea>
+
+            <!-- Budget and Payment -->
+            <label for="budget">Budget:</label>
+            <label for="day-budget">Day (9am to 6pm): LKR 10000</label>
+            <input type="radio" id="day-budget" name="budget" value="day" required>
+            <label for="night-budget">Night (6pm to 7am): LKR 10000</label>
+            <input type="radio" id="night-budget" name="budget" value="night" required>
+
+            <!-- Additional Services -->
+            <label for="additional-services">Additional Services:</label>
+            <textarea id="additional-services" name="additional-services"></textarea>
+
+            <!-- Payment Method -->
+            <label for="payment-method">Payment Method:</label>
+            <select id="payment-method" name="payment-method">
+                <option value="online-card">Online Card Payment</option>
+                <option value="bank-transfer">Bank Transfer</option>
+            </select>
+
+            <!-- Bank Transfer Details -->
+            <div id="bank-transfer-details" style="display: none;">
+                <label for="account-number">Commercial Bank Number:</label>
+                <input type="text" id="account-number" name="account-number" value="092012918391" readonly>
+
+                <label for="account-name">Name:</label>
+                <input type="text" id="account-name" name="account-name" value="M.S.K Mishal" readonly>
+
+                <label for="branch">Branch:</label>
+                <input type="text" id="branch" name="branch" value="Nittambuwa" readonly>
+            </div>
+
+            <input type="submit" value="Submit Reservation">
+<a href="skygateimage.html">Click here see to SkyGate images</a>
+        </form>
+    </div>
+
+   
+
+    <script>
+        // Show/hide bank transfer details based on selected payment method
+        document.getElementById("payment-method").addEventListener("change", function () {
+            const bankTransferDetails = document.getElementById("bank-transfer-details");
+            if (this.value === "bank-transfer") {
+                bankTransferDetails.style.display = "block";
+            } else {
+                bankTransferDetails.style.display = "none";
+            }
+        });
+    </script><br>
+    
+</body>
+</html>
